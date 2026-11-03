@@ -1,0 +1,30 @@
+<vbox xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+      xmlns:html="http://www.w3.org/1999/xhtml" id="pdf2zh-cli-prefs">
+  <linkset><html:link rel="localization" href="pdf2zh-cli.ftl"/></linkset>
+  <groupbox>
+    <label><html:h2>PDF2zh CLI</html:h2></label>
+    <label data-l10n-id="pdf2zh-cli-pref-path"/>
+    <html:input id="pdf2zh-cli-path" type="text" preference="extensions.zotero.pdf2zh-cli.pdf2zhPath"/>
+    <label data-l10n-id="pdf2zh-cli-pref-service"/>
+    <html:input id="pdf2zh-cli-service" type="text" preference="extensions.zotero.pdf2zh-cli.service"/>
+    <label data-l10n-id="pdf2zh-cli-pref-lang-in"/>
+    <html:input type="text" preference="extensions.zotero.pdf2zh-cli.langIn"/>
+    <label data-l10n-id="pdf2zh-cli-pref-lang-out"/>
+    <html:input type="text" preference="extensions.zotero.pdf2zh-cli.langOut"/>
+    <label data-l10n-id="pdf2zh-cli-pref-threads"/>
+    <html:input type="number" min="1" max="32" preference="extensions.zotero.pdf2zh-cli.threads"/>
+    <label data-l10n-id="pdf2zh-cli-pref-extra"/>
+    <html:input type="text" preference="extensions.zotero.pdf2zh-cli.extraArgs"/>
+    <label data-l10n-id="pdf2zh-cli-pref-idle"/>
+    <html:input type="number" min="30" preference="extensions.zotero.pdf2zh-cli.idleTimeoutSeconds"/>
+    <label data-l10n-id="pdf2zh-cli-pref-output"/>
+    <menulist id="pdf2zh-cli-output" preference="extensions.zotero.pdf2zh-cli.output" native="true">
+      <menupopup>
+        <menuitem value="both" data-l10n-id="pdf2zh-cli-pref-output-both"/>
+        <menuitem value="mono" data-l10n-id="pdf2zh-cli-pref-output-mono"/>
+        <menuitem value="dual" data-l10n-id="pdf2zh-cli-pref-output-dual"/>
+      </menupopup>
+    </menulist>
+    <label data-l10n-id="pdf2zh-cli-pref-hint"/>
+  </groupbox>
+</vbox>

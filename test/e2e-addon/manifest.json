@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "PDF2zh CLI E2E Test",
+  "version": "0.0.1",
+  "applications": {
+    "zotero": {
+      "id": "pdf2zh-cli-e2e@local",
+      "update_url": "https://localhost/none.json",
+      "strict_min_version": "10.0",
+      "strict_max_version": "11.*"
+    }
+  }
+}
