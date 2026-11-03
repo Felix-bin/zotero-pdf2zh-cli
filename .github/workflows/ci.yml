@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Check JavaScript syntax
+        run: |
+          for f in bootstrap.js translator.js prefs.js test/e2e-addon/bootstrap.js; do
+            node --check "$f"
+          done
+      - name: Check Python syntax
+        run: python -m py_compile build.py test/run_e2e.py test/check_package.py
+      - name: Build XPI
+        run: python build.py
+      - name: Check package
+        run: python test/check_package.py
+      - uses: actions/upload-artifact@v7
+        with:
+          name: xpi
+          path: dist/*.xpi
+          if-no-files-found: error

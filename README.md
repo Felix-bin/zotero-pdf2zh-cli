@@ -134,8 +134,10 @@ preferences.xhtml   设置页
 prefs.js            默认设置
 locale/             菜单和设置页的多语言文本
 build.py            打包为 dist/*.xpi
-test/               端到端测试
+test/               包检查和端到端测试
 ```
+
+每次推送到 `main` 和每个 Pull Request 都会运行 CI：检查 JS 和 Python 语法，构建 XPI，再用 `test/check_package.py` 检查包内文件、多语言文本和设置项，构建好的 XPI 可以从运行记录下载。CI 不运行端到端测试，改动插件行为后请在本地运行。
 
 端到端测试会在临时的 Zotero 配置和数据目录里运行已构建的 XPI，不会碰你自己的文库，也不会影响正在运行的 Zotero。
 
