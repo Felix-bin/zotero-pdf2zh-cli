@@ -72,6 +72,8 @@ python build.py
 
 选中一个或多个条目，右键选择「用 pdf2zh 翻译」。
 
+![Zotero 条目右键菜单中的「用 pdf2zh 翻译」](docs/images/use.png)
+
 | 选中的内容 | 翻译的文件 | 译文的位置 |
 | --- | --- | --- |
 | 普通条目 | 该条目的第一个 PDF（不含译文） | 该条目的附件 |
@@ -85,6 +87,8 @@ python build.py
 ## 设置
 
 设置位于 Zotero 设置的「PDF2zh CLI」页面。
+
+![Zotero 设置中的 PDF2zh CLI 页面](docs/images/settings.png)
 
 | 设置项 | 默认值 | 说明 |
 | --- | --- | --- |
